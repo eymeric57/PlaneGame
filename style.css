@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+padding: 0;
+overflow: hidden;
+}
+
+
+body {
+    background: rgb(44, 167, 204);
+}
+.top {
+margin-top: -100px;
+width: 100%;
+position: absolute;
+}
+.bottom {
+  width: 100%;
+  position: absolute;
+ bottom: -80px;
+ transform: rotate(180deg);
+}
+.plane {
+    height: 150px;
+    margin: auto;
+    animation: vibrate-1 4s ease-in-out infinite alternate forwards;
+    position: absolute;
+    transition: 0.1s;
+    justify-content: center;
+    background-position: center;
+    z-index: 2;
+    
+}
+.plane1 {
+  text-align: center;
+}
+
+
+ @-webkit-keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+  @keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+  
+
+  .cloud {
+height: 500px;
+    background-image: url(./img/cloud1.png);
+    
+      position: absolute;
+      animation: anim 6s forwards;
+      z-index: 1;
+  
+  
+  }
