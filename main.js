@@ -21,15 +21,20 @@ const cloudMaker1 = () => {
 };
 setInterval(cloudMaker1, 800);
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const cursor1 = document.querySelector(".custom-cursor");
     cursor1.classList.add("cursor1")
+    
+main.addEventListener("mouseover", () => {
+cursor1.classList.remove("cursor1")
+})
 
-    if(cursor1=== "cursor.pointer") {  
-        cursor1.classList.remove("cursor1")
-
-    }
-
+main.addEventListener("mouseout", () => {
+    cursor1.classList.add("cursor1")
+    })
+    
     document.addEventListener("mousemove", function(e) {
         cursor1.style.left = e.clientX + "px";
         cursor1.style.top = e.clientY + "px";
