@@ -1,101 +1,124 @@
+html {
+  height: 100vh;
+}
+
 * {
   margin: 0;
-padding: 0;
-overflow: hidden;
+  padding: 0;
+  overflow: hidden;
 }
 
 
 body {
-    background: rgb(44, 167, 204);
+  background: rgb(44, 167, 204);
+  height: 100%;
 }
+
 .top {
-margin-top: -100px;
-width: 100%;
-position: absolute;
+  margin-top: -100px;
+  width: 100%;
+
+
+
 }
+
 .bottom {
   width: 100%;
   position: absolute;
- bottom: -80px;
- transform: rotate(180deg);
+  bottom: -80px;
+  transform: rotate(180deg);
 }
+
 .plane {
-    height: 150px;
-    margin: auto;
-    animation: vibrate-1 4s ease-in-out infinite alternate forwards;
-    position: absolute;
-    transition: 0.1s;
-    justify-content: center;
-    background-position: center;
-    z-index: 2;
-    
+  height: 150px;
+  margin: auto;
+  animation: vibrate-1 4s ease-in-out infinite alternate forwards;
+  position: absolute;
+  transition: 0.1s;
+  justify-content: center;
+  background-position: center;
+  z-index: 2;
+
+
 }
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  font-size: 1.8rem;
+  position: absolute;
+  left: 10px;
+  margin-top: -130px;
+  left: 20px;
+
+
+}
+
+
+
+
 .plane1 {
   text-align: center;
 }
 
 
- @-webkit-keyframes vibrate-1 {
-    0% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-    20% {
-      -webkit-transform: translate(-2px, 2px);
-              transform: translate(-2px, 2px);
-    }
-    40% {
-      -webkit-transform: translate(-2px, -2px);
-              transform: translate(-2px, -2px);
-    }
-    60% {
-      -webkit-transform: translate(2px, 2px);
-              transform: translate(2px, 2px);
-    }
-    80% {
-      -webkit-transform: translate(2px, -2px);
-              transform: translate(2px, -2px);
-    }
-    100% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
   }
-  @keyframes vibrate-1 {
-    0% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-    20% {
-      -webkit-transform: translate(-2px, 2px);
-              transform: translate(-2px, 2px);
-    }
-    40% {
-      -webkit-transform: translate(-2px, -2px);
-              transform: translate(-2px, -2px);
-    }
-    60% {
-      -webkit-transform: translate(2px, 2px);
-              transform: translate(2px, 2px);
-    }
-    80% {
-      -webkit-transform: translate(2px, -2px);
-              transform: translate(2px, -2px);
-    }
-    100% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-  }
-  
 
-  .cloud {
-height: 500px;
-    background-image: url(./img/cloud1.png);
-    
-      position: absolute;
-      animation: anim 6s forwards;
-      z-index: 1;
-  
-  
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
   }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+
+
+.cloud {
+  background-size: contain;
+  height: 300px;
+  background-image: url(./img/cloud1.png);
+  position: absolute;
+  width: 300px;
+  z-index: 5;
+  right: -200px;
+  animation: cloud1Move 6s linear;
+  filter: drop-shadow(0 0 0.75rem rgb(44, 39, 40));
+}
+
+@-webkit-keyframes cloud1Move {
+
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translateX(-1250px);
+  }
+}
+

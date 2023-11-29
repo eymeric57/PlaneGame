@@ -1,40 +1,72 @@
 const plane = document.getElementById("plane");
 
 let planeTop = 0;
-let planeLeft = 0;
+const speed = 2;
+let isMovingUp = false;
+let isMovingDown = false;
 
+function movePlaneUp() {
+  plane.style.top = planeTop + "px";
+}
+function movePlaneDown() {
+  plane.style.top = planeTop + "px";
+}
 
+function update() {
+  if (isMovingUp && planeTop > 0) {
+    planeTop -= speed;
+    movePlaneUp();
+  }
+  if (isMovingDown && planeTop < window.innerHeight - plane.clientHeight) {
+    planeTop += speed;
+    movePlaneDown();
+  }
+  requestAnimationFrame(update);
+}
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "z") {
-    planeTop -= 10;
-    plane.style.top = planeTop + "px";
-    updatePlanePosition() 
-   
+    isMovingUp = true;
   }
-});
-
-document.addEventListener("keydown", (e) => {
   if (e.key === "s") {
-    planeTop += 10;
-    plane.style.top = planeTop + "px";
-    updatePlanePosition() 
+    isMovingDown = true;
   }
 });
 
+document.addEventListener("keyup", (e) => {
+  if (e.key === "z") {
+    isMovingUp = false;
+  }
+  if (e.key === "s") {
+    isMovingDown = false;
+  }
+});
 
-function updatePlanePosition() {
-   
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
+update();
 
-    planeTop = Math.max(0, Math.min(planeTop, viewportHeight - plane.clientHeight));
-    planeLeft = Math.max(0, Math.min(planeLeft, viewportWidth - plane.clientWidth));
 
-   
-    plane.style.top = planeTop + 'px';
-    plane.style.left = planeLeft + 'px';
-}
 
+
+
+
+
+const cloudMaker1 = () => {
+  const cloud = document.createElement("span");
+  cloud.classList.add("cloud");
+
+  const randomX = Math.floor(Math.random() * (window.innerHeight - 50));
+  cloud.style.top = randomX + "px";
+
+  cloud.style.left = "800px";
+  document.body.appendChild(cloud);
+
+  cloud.remove;
+
+  setTimeout(() => {
+    cloud.remove();
+  }, 5000);
+};
+
+setInterval(cloudMaker1, 1000);
 
 
