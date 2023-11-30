@@ -4,13 +4,57 @@ let planeTop = 0;
 const speed = 2;
 let isMovingUp = false;
 let isMovingDown = false;
+let firstLife = false;
+let fa1 = document.getElementById('fa1');
+let fa2 = document.getElementById('fa2');
+let fa3 = document.getElementById('fa3');
+let life = [fa1, fa2, fa3]
+let element = 0
 
+
+
+function lose() {
+  if(life[1].style.color ==="grey") {
+    loseDiv.style.opacity = "1"
+    loseDiv.style.zIndex = "50"
+  }
+}
 function movePlaneUp() {
   plane.style.top = planeTop + "px";
 }
 function movePlaneDown() {
   plane.style.top = planeTop + "px";
 }
+function crash() {
+  const planeRect = plane.getBoundingClientRect();
+  
+  document.querySelectorAll(".cloud").forEach((cloud) => {
+    const cloudRect = cloud.getBoundingClientRect();
+
+    if (!firstLife &&
+      planeRect.left < cloudRect.right &&
+      planeRect.right > cloudRect.left &&
+      planeRect.top < cloudRect.bottom &&
+      planeRect.bottom > cloudRect.top
+    ) {
+      lose();
+    life[element].style.color ="grey"
+    element = (element + 1 ) % life.length;
+    firstLife = true
+    plane.classList.add("lostLife")
+   
+
+    setTimeout(() => {
+     
+      firstLife = false
+      plane.classList.remove("lostLife")
+    },4000)
+   
+    }
+   
+
+  })}
+setInterval(crash, 100);
 
 function update() {
   if (isMovingUp && planeTop > 0) {
@@ -21,6 +65,7 @@ function update() {
     planeTop += speed;
     movePlaneDown();
   }
+  crash()
   requestAnimationFrame(update);
 }
 
@@ -41,9 +86,6 @@ document.addEventListener("keyup", (e) => {
     isMovingDown = false;
   }
 });
-
-update();
-
 
 
 
@@ -70,3 +112,15 @@ const cloudMaker1 = () => {
 setInterval(cloudMaker1, 1000);
 
 
+
+update();
+
+
+retry.addEventListener ("click", () => {
+  location.reload();
+})
+
+quit.addEventListener("click", () => {
+  window.location.href='./main.html'
+}
+)
