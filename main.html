@@ -5,60 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Plane</title>
 </head>
 
 <body>
     <div class="custom-cursor"></div>
 
-    
-        <h1>Plane</h1>
+
+    <h1 id="Title1">Plane</h1>
 
 
 
 
 
-        <div class="plane1"><img src="./img/avion2.png" alt=""></div>
+    <div class="plane1"><img src="./img/avion2.png" alt=""></div>
 
-        <div class="plane2"><img src="./img/avion4.png" alt=""></div>
+    <div class="plane2"><img src="./img/avion4.png" alt=""></div>
 
-        <div id="main1" class="main-container">
-            <div id="play" class="play">Voler</div>
-            <div id="lvl" class="lvl-selected">Niveau</div>
-            <div id="id3" class="div3"> ....</div>
+    <div id="main1" class="main-container">
+        <div id="play" class="play">Voler</div>
+        <div id="lvl" class="lvl-selected">Niveau</div>
+        <div id="RulesBtn" class="div3"> Règles</div>
 
-        </div>
+    </div>
 
 
 
-   
+
 
     <div id="lvlContainer" class="lvl-container">
         <div id="close" class="close"><i class="fa-solid fa-xmark"></i></div>
-        <div class="lvl">1</div>
-        <div class="lvl">2</div>
-        <div class="lvl">3</div>
-        <div class="lvl">4</div>
-        <div class="lvl">5</div>
-        <div class="lvl">6</div>
-        <div class="lvl">7</div>
-        <div class="lvl">8</div>
-        <div class="lvl">9</div>
-        <div class="lvl">10</div>
-        <div class="lvl">11</div>
-        <div class="lvl">12</div>
-        <div class="lvl">13</div>
-        <div class="lvl">14</div>
-        <div class="lvl">15</div>
-        <div class="lvl">16</div>
-        <div class="lvl">17</div>
-        <div class="lvl">18</div>
-        <div class="lvl">19</div>
-        <div class="lvl">20</div>
+        <div id="lvl1" class="lvl">1</div>
+        <div id="lvl2" class="lvl">2</div>
+        <div id="lvl3" class="lvl">3</div>
+        <div id="lvl4" class="lvl">4</div>
+        <div id="lvl5" class="lvl">5</div>
+        <div id="lvl6" class="lvl">6</div>
+        <div id="lvl7" class="lvl">7</div>
+        <div id="lvl8" class="lvl">8</div>
+        <div id="lvl9" class="lvl">9</div>
+        <div id="lvl10" class="lvl">10</div>
+        <div id="lvl11" class="lvl">11</div>
+        <div id="lvl12" class="lvl">12</div>
+        <div id="lvl13" class="lvl">13</div>
+        <div id="lvl14" class="lvl">14</div>
+        <div id="lvl15" class="lvl">15</div>
+        <div id="lvl16" class="lvl">16</div>
+        <div id="lvl17" class="lvl">17</div>
+        <div id="lvl18" class="lvl">18</div>
+        <div id="lvl19" class="lvl">19</div>
+        <div id="lvl20" class="lvl">20</div>
     </div>
 
-    <script src="./main.js"></script>
+
+
+    <div id="Rules" class="Rules">
+        <div id="closeRules" class="close"><i class="fa-solid fa-xmark"></i></div>
+        <h1 id="RulesTitle">Règles</h1>
+
+        <div class="containerRules">
+            <ul id="zqsd">
+                <li class="liRules" id="z">Z</li>
+                <li class="liRules" id="q">S</li>
+                <li class="liRules" id="s">Q</li>
+                <li class="liRules" id="d">D</li>
+            </ul>
+
+
+            <p id="rulesP">Vous pouvez utiliser <b>Z</b> pour aller vers le haut et <b>S</b> pour aller vers le bas !
+                Les fléches <i class="fa-solid fa-arrow-up"></i> et <i class="fa-solid fa-arrow-down"></i> fonctionne
+                aussi
+            </p>
+            </ul>
+        </div>
+        <script src="./main.js"></script>
 </body>
 
 </html>
