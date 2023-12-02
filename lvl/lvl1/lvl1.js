@@ -14,16 +14,12 @@ let life = [fa1, fa2, fa3];
 let element = 0;
 let distance = 1000;
 let traveled = true;
-let counting = true
-
-
-
+let counting = true;
 
 /////////////////////////////Plane Move ////////////////////////
 
 function movePlaneUp() {
   plane.style.top = planeTop + "px";
-  
 }
 function movePlaneDown() {
   plane.style.top = planeTop + "px";
@@ -48,10 +44,8 @@ document.addEventListener("keyup", (e) => {
   }
 });
 
-
 function update() {
-
-  if (isMovingDown && planeTop < window.innerHeight  - plane.clientHeight - 50) {
+  if (isMovingDown && planeTop < window.innerHeight - plane.clientHeight - 50) {
     planeTop += speed;
     movePlaneDown();
   }
@@ -88,10 +82,8 @@ update();
 
 //////Distance Traveled /////////////////////////
 
-
-
 function DisTraveled() {
-  if (traveled ) {
+  if (traveled) {
     distanceElement.innerText = distance + "m";
     distance--;
     distance = distance <= 0 ? 0 : distance - 0;
@@ -101,7 +93,7 @@ function DisTraveled() {
       win.style.zIndex = "50";
       loseDiv.style.display = "none";
       plane.style.display = "none";
-      localStorage.setItem("lvl1","ok");
+      localStorage.setItem("lvl1", "ok");
     }
   }
 }
@@ -147,7 +139,7 @@ function lose() {
   if (life[1].style.color === "grey") {
     loseDiv.style.opacity = "1";
     loseDiv.style.zIndex = "50";
-    stopTraveled(); 
+    stopTraveled();
   }
 }
 
@@ -158,14 +150,12 @@ retry.addEventListener("click", () => {
 });
 
 quit.addEventListener("click", () => {
-  window.location.href = "./main.html";
+  window.location.href = ".../main/main.html";
 });
-
-
 
 ///////////////////////Win///////////////////////////
 menu.addEventListener("click", () => {
-  window.location.href = "./main.html";
-})
+  window.location.href = ".../main/main.html";
+});
 
 console.log(localStorage);

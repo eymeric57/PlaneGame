@@ -1,348 +1,64 @@
-html {
-  height: 100vh;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
 body {
-  background:
-  #A0E9FF;
-  height: 100%;
+    background: black;
 }
 
-.top {
-  margin-top: -100px;
-  width: 100%;
+.smoke {
+background: url(./img/smoke.png);
+background-size: contain;
+background-repeat: no-repeat;
+height: 100px;
+width: 100px;
+animation: smoke 0.5s infinite linear;
 }
+.smoke2 {
+    background: url(./img/smoke.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 100px;
+    animation: smoke2 1s infinite linear;
+    }
 
-.timer {
-  color: black;
-  height: 100px;
-
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  padding: 0;
-}
-
-.win {
-  width: 50%;
-  background: #89d0f3be;
-  margin: 0 auto;
-  height: 300px;
-  border-radius: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  transform: translateY(-500px);
-  position: relative;
-  opacity: 1;
-}
-
-#winUl {
-  display: flex;
+@keyframes smoke {
+    0% {
+      transform: translate(0);
+     
+    }
   
-  justify-content: space-around;
-  padding-top: 20px;
-}
+    50% {
 
-#winUl li {
-  font-size: 1.5rem;
-  background: #cdf5fd9f;
-  padding: 10px 30px;
-  border-radius: 20px;
-  color: #00a9ff;
-  font-weight: 500;
-  z-index: 10;
-  margin-bottom: 10px;
-  transition: 0.6s;
-}
-
-.bottom {
-  width: 100%;
-  position: absolute;
-  bottom: -80px;
-  transform: rotate(180deg);
-}
-
-.plane {
-  animation: vibrate-1 4s ease-in-out infinite alternate forwards;
-  position: absolute;
-  transition: 0.1s;
-  background-position: center;
-  left: 50px;
-  top: 50px;
-  z-index: 2;
-}
-
-.lostLife {
-  border-radius: 5000px;
-  animation: shield 3s;
-  align-items: center;
-}
-
-#life {
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 1.8rem;
-  position: absolute;
-  left: 10px;
-  margin-top: -130px;
-  left: 20px;
-}
-
-li {
-  padding: 1px;
-}
-
-i {
-  padding: 5px;
-}
-
-.plane1 {
-  text-align: center;
-}
-
-.cloud {
-  background-size: contain;
-  height: 50px;
-  background-image: url(./img/cloud1.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 100px;
-  z-index: 5;
-  right: -200px;
-  animation: cloud1Move 6s linear;
-  filter: drop-shadow(0 0 0.75rem rgb(44, 39, 40));
-}
-
-.loser {
-  width: 50%;
-  background: #89d0f3be;
-  height: 300px;
-  margin: -200px auto;
-  border-radius: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  z-index: -30;
-  position: relative;
-  opacity: 0;
-}
-
-h1 {
-  text-align: center;
-  padding: 30px 30px 30px;
-  color: #ffffff;
-}
-
-p {
-  text-align: center;
-  font-size: 2rem;
-  padding-bottom: 20px;
-  color: #00a9ff;
-  font-weight: 700;
-}
-
-#loseUl {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 20px;
-}
-
-#loseUl li {
-  font-size: 1.5rem;
-  background: #cdf5fd9f;
-  padding: 10px 30px;
-  border-radius: 20px;
-  color: #00a9ff;
-  font-weight: 500;
-  z-index: 10;
-  margin-bottom: 10px;
-  transition: 0.6s;
-}
-
-li:hover {
-  scale: 1.2;
-  cursor: pointer;
-}
-
-/*/////// animation///////////*/
-
-@keyframes shield {
-  0% {
-    transform: translate(0);
-    opacity: 0;
+    
+    }
+  
+    100% {
+      transform: translate(-40px, 2px);
+      backgroud-color: rgba(255, 255, 255, 0);
+      
+     
+    }
+  
+    
   }
+  
+  
+@keyframes smoke2 {
+    0% {
+      transform: translate(0);
+     
+    }
+  
+    50% {
 
-  5% {
-    backgroud-color: rgba(255, 255, 255, 0.534);
-    opacity: 1;
+    
+    }
+  
+    100% {
+      transform: translate(-40px, 2px);
+      backgroud-color: rgba(255, 255, 255, 0);
+     
+     
+    }
+  
+    
   }
-
-  10% {
-    transform: translate(-2px, 2px);
-    backgroud-color: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-
-  15% {
-    backgroud-color: rgba(255, 255, 255, 0.5);
-    opacity: 1;
-  }
-
-  20% {
-    transform: translate(-2px, -2px);
-    backgrond-color: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-
-  25% {
-    background-olor: rgba(255, 255, 255, 0.507);
-    opacity: 1;
-  }
-
-  30% {
-    transform: translate(2px, 2px);
-    background-olor: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-
-  35% {
-    background-olor: rgba(255, 255, 255, 0.432);
-    opacity: 1;
-  }
-
-  40% {
-    transform: translate(2px, -2px);
-    background-clor: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-
-  45% {
-    background-clor: rgba(255, 255, 255, 0.377);
-    opacity: 1;
-  }
-
-  50% {
-    transform: translate(0);
-    background-olor: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-
-  45% {
-    background-olor: rgba(255, 255, 255, 0.377);
-    opacity: 1;
-  }
-
-  50% {
-    transform: translate(0);
-    background-clor: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-
-  45% {
-    background-clor: rgba(255, 255, 255, 0.377);
-    opacity: 1;
-  }
-
-  50% {
-    transform: translate(0);
-    background-olor: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-
-  55% {
-    background-olor: rgba(255, 255, 255, 0.377);
-    opacity: 1;
-  }
-
-  60% {
-    transform: translate(0);
-    background-clor: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-
-  65% {
-    background-clor: rgba(255, 255, 255, 0.377);
-    opacity: 1;
-  }
-
-  70% {
-    transform: translate(0);
-    background-clor: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-
-  75% {
-    background-olor: rgba(255, 255, 255, 0.377);
-    opacity: 1;
-  }
-
-  80% {
-    transform: translate(0);
-    backgroundcolor: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-
-  85% {
-    background-olor: rgba(255, 255, 255, 0.377);
-    opacity: 1;
-  }
-
-  90% {
-    transform: translate(0);
-    background-olor: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-
-  95% {
-    backgroundcolor: rgba(255, 255, 255, 0.377);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translate(0);
-    backgroun-color: rgba(255, 255, 255, 0);
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes cloud1Move {
-  0% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
-
-  100% {
-    -webkit-transform: translate(0);
-    transform: translateX(-1250px);
-  }
-}
-
-@-webkit-keyframes vibrate-1 {
-  0% {
-    transform: translate(0);
-  }
-
-  20% {
-    transform: translate(-2px, 2px);
-  }
-
-  40% {
-    transform: translate(-2px, -2px);
-  }
-
-  60% {
-    transform: translate(2px, 2px);
-  }
-
-  80% {
-    transform: translate(2px, -2px);
-  }
-
-  100% {
-    transform: translate(0);
-  }
-}
+  

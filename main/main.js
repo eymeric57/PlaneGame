@@ -1,11 +1,6 @@
 const cloud = document.getElementsByClassName("span");
 const close = document.getElementById("close");
 
-
-
-
-
-
 ///////////////////////Cloud Maker //////////////////////////
 const cloudMaker1 = () => {
   const cloud = document.createElement("span");
@@ -23,14 +18,9 @@ const cloudMaker1 = () => {
 };
 setInterval(cloudMaker1, 1000);
 
-
-
-
-
 ///////////////////////////////////////////////////////////
 
 //////////////////////////Cursor/////////////////////////////
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const cursor1 = document.querySelector(".custom-cursor");
@@ -61,17 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
+//////////////////////////////Play BTN /////////////////////////////////////
 
 play.addEventListener("click", () => {
-  window.location.href = "./index.html";
-});
-
-lvl.addEventListener("click", () => {
-  main1.style.display = "none";
-  lvlContainer.style.opacity = "5";
-  lvlContainer.style.marginTop = "250px";
+  window.location.href = "../lvl/lvl1/lvl1.html";
 });
 
 close.addEventListener("click", () => {
@@ -79,6 +62,8 @@ close.addEventListener("click", () => {
   lvlContainer.style.opacity = "-5";
   lvlContainer.style.marginTop = "-900px";
 });
+
+//////////////////////////////////////Rules btn //////////////////////////////////////////
 
 RulesBtn.addEventListener("click", () => {
   main1.style.display = "none";
@@ -92,23 +77,24 @@ closeRules.addEventListener("click", () => {
   Rules.style.display = "none";
 });
 
-play.addEventListener("click", () => {
-  window.location.href = "./index.html";
-});
-
-
 /////////////////////LocalStorage //////////////
 
-let lvl1Value = localStorage.getItem("lvl1")
+let lvl1Value = localStorage.getItem("lvl1");
 if (lvl1Value) {
-  lvl1.classList.add ("lvlFinished")
-
+  lvl1.classList.add("lvlFinished");
 }
+/////////////////////////LVL Btn ///////////////////////
 
+lvl.addEventListener("click", () => {
+  main1.style.display = "none";
+  lvlContainer.style.opacity = "5";
+  lvlContainer.style.marginTop = "250px";
+});
 
 ///////////////////lvlSelected//////////////////
 
 lvl1.addEventListener("click", () => {
-  if (lvl1.style.color === "#rgb(0, 170, 255)")
-  window.location.href = "./index.html";
-})
+  if (lvl1.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl1/lvl1.html";
+  console.log("yo");
+});
