@@ -26,20 +26,20 @@ function movePlaneDown() {
 }
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "z" || e.key === "ArrowUp") {
+  if (e.key === "z" || e.key === "ArrowUp"  || e.key === "Z") {
     isMovingUp = true;
   }
-  if (e.key === "s" || e.key === "ArrowDown") {
+  if (e.key === "s" || e.key === "ArrowDown" || e.key === "S")  {
     isMovingDown = true;
   }
-  console.log(e.key);
+ 
 });
 
 document.addEventListener("keyup", (e) => {
-  if (e.key === "z" || e.key === "ArrowUp") {
+  if (e.key === "z" || e.key === "ArrowUp" || e.key ==="Z") {
     isMovingUp = false;
   }
-  if (e.key === "s" || e.key === "ArrowDown") {
+  if (e.key === "s" || e.key === "ArrowDown" || e.key === "S") {
     isMovingDown = false;
   }
 });
@@ -150,12 +150,12 @@ retry.addEventListener("click", () => {
 });
 
 quit.addEventListener("click", () => {
-  window.location.href = ".../main/main.html";
+  window.location.href = "/main/main.html";
 });
 
 ///////////////////////Win///////////////////////////
 menu.addEventListener("click", () => {
-  window.location.href = ".../main/main.html";
+  window.location.href = "/main/main.html";
 });
 
 console.log(localStorage);
