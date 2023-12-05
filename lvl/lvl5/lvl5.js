@@ -72,10 +72,10 @@ const cloudMaker1 = () => {
 
   setTimeout(() => {
     cloud.remove();
-  }, 5000);
+  }, 3000);
 };
 
-setInterval(cloudMaker1, 1000);
+setInterval(cloudMaker1, 500);
 
 update();
 
@@ -92,7 +92,7 @@ function DisTraveled() {
       win.style.zIndex = "50";
       loseDiv.style.display = "none";
       plane.style.display = "none";
-      localStorage.setItem("lvl1", "ok");
+      localStorage.setItem("lvl5", "ok");
     }
   }
 }
@@ -153,12 +153,11 @@ quit.addEventListener("click", () => {
 });
 
 ///////////////////////Win///////////////////////////
-
 next.addEventListener("click", () => {
-  window.location.href = "../lvl2/lvl2.html";
+  window.location.href = "../lvl6/animation1.html";
 });
 menu.addEventListener("click", () => {
   window.location.href = "/main/main.html";
 });
 
-
+console.log(localStorage);

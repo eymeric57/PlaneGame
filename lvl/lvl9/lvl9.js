@@ -26,16 +26,17 @@ function movePlaneDown() {
 }
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "z" || e.key === "ArrowUp" || e.key === "Z") {
+  if (e.key === "z" || e.key === "ArrowUp"  || e.key === "Z") {
     isMovingUp = true;
   }
-  if (e.key === "s" || e.key === "ArrowDown" || e.key === "S") {
+  if (e.key === "s" || e.key === "ArrowDown" || e.key === "S")  {
     isMovingDown = true;
   }
+ 
 });
 
 document.addEventListener("keyup", (e) => {
-  if (e.key === "z" || e.key === "ArrowUp" || e.key === "Z") {
+  if (e.key === "z" || e.key === "ArrowUp" || e.key ==="Z") {
     isMovingUp = false;
   }
   if (e.key === "s" || e.key === "ArrowDown" || e.key === "S") {
@@ -53,31 +54,57 @@ function update() {
     movePlaneUp();
   }
 
-  crash();
+  crash1();
+  crash2()
   requestAnimationFrame(update);
 }
 
-///////////////////////////Cloud Maker ////////////////////////////////
+///////////////////////////Laser1 Maker ////////////////////////////////
 
-const cloudMaker1 = () => {
-  const cloud = document.createElement("span");
-  cloud.classList.add("cloud");
+const LaserMaker1 = () => {
+    const Laser1 = document.createElement("span");
+    Laser1.classList.add("laser1");
+   
+    const randomX = Math.floor(Math.random() * (window.innerHeight - 50));
+    Laser1.style.top = randomX + "px";
+    Laser1.style.left = "800px";
+    document.body.appendChild(Laser1);
+  
+    Laser1.remove;
+  
+    setTimeout(() => {
+      Laser1.remove();
+    }, 3000);
+  };
+  
+  setInterval(LaserMaker1, 1000);
+  
+  update();
 
-  const randomX = Math.floor(Math.random() * (window.innerHeight - 50));
-  cloud.style.top = randomX + "px";
-  cloud.style.left = "800px";
-  document.body.appendChild(cloud);
+///////////////Laser Maker //////////////////////////////////
 
-  cloud.remove;
+  const LaserMaker = () => {
+    const Laser = document.createElement("span");
+    Laser.classList.add("laser");
+   
+    const randomX = Math.floor(Math.random() * (window.innerHeight - 50));
+    Laser.style.top = randomX + "px";
+    Laser.style.left = "800px";
+    document.body.appendChild(Laser);
+  
+    Laser.remove;
+  
+    setTimeout(() => {
+      Laser.remove();
+    }, 3000);
+  };
+  
+  setInterval(LaserMaker, 500);
+  
+  update();
 
-  setTimeout(() => {
-    cloud.remove();
-  }, 5000);
-};
 
-setInterval(cloudMaker1, 1000);
 
-update();
 
 //////Distance Traveled /////////////////////////
 
@@ -92,7 +119,7 @@ function DisTraveled() {
       win.style.zIndex = "50";
       loseDiv.style.display = "none";
       plane.style.display = "none";
-      localStorage.setItem("lvl1", "ok");
+      localStorage.setItem("lvl9", "ok");
     }
   }
 }
@@ -105,18 +132,18 @@ setInterval(DisTraveled, 16);
 
 ////////////////////////Crash ////////////////////////////////
 
-function crash() {
+function crash1() {
   const planeRect = plane1.getBoundingClientRect();
 
-  document.querySelectorAll(".cloud").forEach((cloud) => {
-    const cloudRect = cloud.getBoundingClientRect();
+  document.querySelectorAll(".laser").forEach((laser1) => {
+    const laser1Rect = laser1.getBoundingClientRect();
 
     if (
       !firstLife &&
-      planeRect.left < cloudRect.right &&
-      planeRect.right > cloudRect.left &&
-      planeRect.top < cloudRect.bottom &&
-      planeRect.bottom > cloudRect.top
+      planeRect.left < laser1Rect.right &&
+      planeRect.right > laser1Rect.left &&
+      planeRect.top < laser1Rect.bottom &&
+      planeRect.bottom > laser1Rect.top
     ) {
       lose();
       life[element].style.color = "grey";
@@ -132,7 +159,7 @@ function crash() {
   });
 }
 
-setInterval(crash, 100);
+setInterval(crash1, 100);
 
 function lose() {
   if (life[1].style.color === "grey") {
@@ -141,6 +168,50 @@ function lose() {
     stopTraveled();
   }
 }
+
+
+
+///////// crash2 ///////////////////////////////
+
+
+
+function crash2() {
+  const planeRect = plane1.getBoundingClientRect();
+
+  document.querySelectorAll(".laser1").forEach((laser) => {
+    const laserRect = laser.getBoundingClientRect();
+
+    if (
+      !firstLife &&
+      planeRect.left < laserRect.right &&
+      planeRect.right > laserRect.left &&
+      planeRect.top < laserRect.bottom &&
+      planeRect.bottom > laserRect.top
+    ) {
+      lose();
+      life[element].style.color = "grey";
+      element = (element + 1) % life.length;
+      firstLife = true;
+      plane.classList.add("lostLife");
+
+      setTimeout(() => {
+        firstLife = false;
+        plane.classList.remove("lostLife");
+      }, 3000);
+    }
+  });
+}
+
+setInterval(crash2, 100);
+
+function lose() {
+  if (life[1].style.color === "grey") {
+    loseDiv.style.opacity = "1";
+    loseDiv.style.zIndex = "50";
+    stopTraveled();
+  }
+}
+
 
 /////////////////////Retry/////////////////////
 
@@ -153,12 +224,9 @@ quit.addEventListener("click", () => {
 });
 
 ///////////////////////Win///////////////////////////
-
 next.addEventListener("click", () => {
-  window.location.href = "../lvl2/lvl2.html";
+  window.location.href = "../lvl10/lvl10.html";
 });
 menu.addEventListener("click", () => {
   window.location.href = "/main/main.html";
 });
-
-

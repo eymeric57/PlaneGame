@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+.fullPage {
+    width: 100%;
+    z-index: 5;
+    background: white;
+
+}
+
+.game {
+    width: 900px;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0 auto;
+    background:
+        #A0E9FF;
+    position: relative;
+    
+}
+
+.top {
+    margin-top: -50px;
+    width: 100%;
+
+}
+
+.bottom {
+    width: 100%;
+    position: absolute;
+    bottom: -80px;
+    transform: rotate(180deg);
+}
+
+#spaceShip {
+    margin-left: -200px;
+    animation: space 2s linear;
+    position: absolute;
+    animation-fill-mode: forwards;
+    z-index: 50;
+    
+    
+}
+@keyframes space {
+    0% {
+        left: 0px
+    }
+
+    50% {
+        left: 200px;
+    }
+
+    100% {
+        left: 500px;
+    }
+}
+
+
+#light {
+    margin-left: -280px;
+    animation: light 2s linear;
+ 
+    position: absolute;
+    margin-top: -80px;
+    animation-fill-mode: forwards;
+    height:650px;
+    z-index: 20;
+}
+@keyframes light{
+    0% {
+        opacity: 1;
+        left: 0px
+    }
+    5%{
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+    35% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        left: 200px;
+    }
+    60% {
+        opacity: 0;
+    }
+    65%{
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+ 
+    75% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    85%{
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        left: 500px;
+    }
+}
+
+
+
+.plane {
+    animation: plane 2s linear;
+    position: absolute;
+    transition: 0.1s;
+    background-position: center;
+    margin-left: -140px;
+    top: 450px;
+    z-index: 2;
+    animation-fill-mode: forwards
+}
+
+
+@keyframes plane {
+    0% {
+        left: 0px
+    }
+
+    50% {
+        left: 200px;
+    }
+
+    100% {
+        left: 500px;
+    }
+}
+
+.gameEnd {
+animation:spaceMove 2s linear ;
+
+}
+
+@keyframes end {
+    0% {
+       opacity: 1;
+       
+    }
+
+
+    100% {
+       opacity: 0 ;
+    }
+}

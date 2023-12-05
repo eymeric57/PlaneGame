@@ -83,6 +83,51 @@ let lvl1Value = localStorage.getItem("lvl1");
 if (lvl1Value) {
   lvl1.classList.add("lvlFinished");
 }
+
+let lvl2Value = localStorage.getItem("lvl2");
+if (lvl2Value) {
+  lvl2.classList.add("lvlFinished");
+}
+
+let lvl3Value = localStorage.getItem("lvl3");
+if (lvl3Value) {
+  lvl3.classList.add("lvlFinished");
+}
+
+let lvl4Value = localStorage.getItem("lvl4");
+if (lvl4Value) {
+  lvl4.classList.add("lvlFinished");
+}
+
+let lvl5Value = localStorage.getItem("lvl5");
+if (lvl5Value) {
+  lvl5.classList.add("lvlFinished");
+}
+
+let lvl6Value = localStorage.getItem("lvl6");
+if (lvl6Value) {
+  lvl6.classList.add("lvlFinished");
+}
+let lvl7Value = localStorage.getItem("lvl7");
+if (lvl7Value) {
+  lvl7.classList.add("lvlFinished");
+}
+let lvl8Value = localStorage.getItem("lvl8");
+if (lvl8Value) {
+  lvl8.classList.add("lvlFinished");
+}
+let lvl9Value = localStorage.getItem("lvl9");
+if (lvl9Value) {
+  lvl9.classList.add("lvlFinished");
+}
+let lvl10Value = localStorage.getItem("lvl10");
+if (lvl10Value) {
+  lvl10.classList.add("lvlFinished");
+}
+let lvl11Value = localStorage.getItem("lvl11");
+if (lvl11Value) {
+  lvl11.classList.add("lvlFinished");
+}
 /////////////////////////LVL Btn ///////////////////////
 
 lvl.addEventListener("click", () => {
@@ -96,5 +141,60 @@ lvl.addEventListener("click", () => {
 lvl1.addEventListener("click", () => {
   if (lvl1.classList.contains("lvlFinished"))
     window.location.href = "../lvl/lvl1/lvl1.html";
-  console.log("yo");
+  
 });
+
+lvl2.addEventListener("click", () => {
+  if (lvl1.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl2/lvl2.html";
+  
+});
+
+lvl3.addEventListener("click", () => {
+  if (lvl3.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl3/lvl3.html";
+  
+});
+
+lvl4.addEventListener("click", () => {
+  if (lvl4.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl4/lvl4.html";
+ 
+});
+
+lvl5.addEventListener("click", () => {
+  if (lvl5.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl5/lvl5.html";
+ 
+});
+
+lvl6.addEventListener("click", () => {
+  if (lvl6.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl6/lvl6.html";
+ 
+});
+
+lvl7.addEventListener("click", () => {
+  if (lvl7.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl7/lvl7.html";
+ 
+});
+
+lvl8.addEventListener("click", () => {
+  if (lvl8.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl8/lvl8.html";
+ 
+});
+
+lvl9.addEventListener("click", () => {
+  if (lvl9.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl9/lvl9.html";
+ 
+});
+
+lvl10.addEventListener("click", () => {
+  if (lvl10.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl10/lvl10.html";
+ 
+});
+

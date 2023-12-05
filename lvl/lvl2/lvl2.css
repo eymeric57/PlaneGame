@@ -119,11 +119,11 @@ i {
 
 .cloud {
   background-size: contain;
-  height: 50px;
+  height: 100px;
   background-image: url(/img/cloud1.png);
   background-repeat: no-repeat;
   position: absolute;
-  width: 100px;
+  width: 150px;
   z-index: 5;
   animation: cloud1Move 6s linear;
   

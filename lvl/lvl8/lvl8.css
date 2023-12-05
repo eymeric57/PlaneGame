@@ -1,35 +1,50 @@
-
-
 * {
   margin: 0;
   padding: 0;
   overflow: hidden;
   user-select: none;
 }
+
 .fullPage {
   width: 100%;
-  z-index: 5;
-  background: white; 
- 
+  background: white;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  z-index: 3;
+
 }
+
+.leftPage {
+  z-index: 3;
+  background: white;
+}
+
+.rightPage {
+  z-index: 3;
+  background: white;
+}
+
 .game {
-width: 900px;
-overflow: hidden;
-height: 100vh;
-margin: 0 auto;
-background:
-#A0E9FF;
-position: relative;
+
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  background: url(/img/space.png);
+  background-size: contain;
+  z-index: 1;
 }
-
-
 
 .top {
-  margin-top: -50px;
-  width: 100%;
-  
-}
+  margin-top: -100px;
+  width: 1050px;
 
+}
+.shieldLoot {
+
+  border: solid white;
+}
 
 .timer {
   color: black;
@@ -56,7 +71,7 @@ position: relative;
 
 #winUl {
   display: flex;
-  
+
   justify-content: space-around;
   padding-top: 20px;
 }
@@ -75,9 +90,10 @@ position: relative;
 
 .bottom {
   width: 100%;
-  position: absolute;
   bottom: -80px;
   transform: rotate(180deg);
+  position: absolute;
+
 }
 
 .plane {
@@ -101,8 +117,8 @@ position: relative;
   justify-content: space-evenly;
   font-size: 1.8rem;
   position: absolute;
- top: 20px;
-left: 20px;
+  top: 20px;
+  left: 20px;
 }
 
 li {
@@ -120,13 +136,14 @@ i {
 .cloud {
   background-size: contain;
   height: 50px;
-  background-image: url(/img/cloud1.png);
+  background-image: url(/img/comete.png);
   background-repeat: no-repeat;
   position: absolute;
-  width: 100px;
-  z-index: 5;
-  animation: cloud1Move 6s linear;
-  
+  width: 200px;
+  z-index: 2;
+  animation: cloud1Move 3s linear;
+
+
 }
 
 .loser {
@@ -321,12 +338,12 @@ li:hover {
 
 @-webkit-keyframes cloud1Move {
   0% {
-    -webkit-transform: translate(0);
-    transform: translate(1000px);
+
+    transform: translate(800px);
   }
 
   100% {
-    -webkit-transform: translate(0);
+
     transform: translateX(-1250px);
   }
 }
@@ -356,7 +373,3 @@ li:hover {
     transform: translate(0);
   }
 }
-
-
-
-
