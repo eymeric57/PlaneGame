@@ -9,40 +9,46 @@
   width: 100%;
   background: white;
   display: grid;
-  grid-template-columns: 25% 50% 25%;
+  grid-template-columns: 1fr minmax(900px,900px ) 1fr;
+  grid-template-areas: "a b c";
   z-index: 3;
 
 }
 
+
+
 .leftPage {
+  grid-area: "a";
   z-index: 3;
   background: white;
 }
 
 .rightPage {
+  grid-area: "c";
   z-index: 3;
   background: white;
 }
 
 .game {
-
-  width: 100%;
-  overflow: hidden;
-  height: 100vh;
-  margin: 0 auto;
-  position: relative;
-  background: url(/img/space.png);
-  background-size: contain;
-  z-index: 1;
+  grid-area: "b";
+  max-width: 900px;
+  min-width: 900px; 
+      overflow: hidden;
+      height: 100vh;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      background: url(/img/space.png);
+      background-size: contain;
+      z-index: 1;
 }
 
 .top {
   margin-top: -100px;
   width: 1050px;
-
 }
-.shieldLoot {
 
+.shieldLoot {
   border: solid white;
 }
 
@@ -93,7 +99,6 @@
   bottom: -80px;
   transform: rotate(180deg);
   position: absolute;
-
 }
 
 .plane {
@@ -142,8 +147,6 @@ i {
   width: 200px;
   z-index: 2;
   animation: cloud1Move 3s linear;
-
-
 }
 
 .loser {
@@ -338,12 +341,21 @@ li:hover {
 
 @-webkit-keyframes cloud1Move {
   0% {
-
+    opacity: 0;
     transform: translate(800px);
   }
 
-  100% {
+  10% {
+    opacity: 0;
+    transform: ranslate(-1000px);
+  }
 
+  20% {
+    opacity: 1;
+    transform: ranslate(-1000px);
+  }
+
+  100% {
     transform: translateX(-1250px);
   }
 }

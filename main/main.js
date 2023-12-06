@@ -197,4 +197,34 @@ lvl10.addEventListener("click", () => {
     window.location.href = "../lvl/lvl10/lvl10.html";
  
 });
+lvl11.addEventListener("click", () => {
+  if (lvl11.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl11/lvl11.html";
+ 
+});
+
+lvl12.addEventListener("click", () => {
+  if (lvl12.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl12/lvl12.html";
+ 
+});
+
+lvl13.addEventListener("click", () => {
+  if (lvl13.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl13/lvl13.html";
+ 
+});
+
+lvl14.addEventListener("click", () => {
+  if (lvl14.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl14/lvl14.html";
+ 
+});
+
+lvl15.addEventListener("click", () => {
+  if (lvl15.classList.contains("lvlFinished"))
+    window.location.href = "../lvl/lvl15/lvl15.html";
+ 
+});
+
 

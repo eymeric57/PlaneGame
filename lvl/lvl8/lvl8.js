@@ -73,7 +73,7 @@ const cloudMaker1 = () => {
   
     setTimeout(() => {
       cloud.remove();
-    }, 3000);
+    }, 1800);
   };
   
   setInterval(cloudMaker1, 200);

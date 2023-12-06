@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="lvl6.css" />
+  <link rel="stylesheet" href="lvl14.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,9 +16,10 @@
 
     <div class="leftPage"></div>
 
-    <div class="game">
+    <div id="game" class="game">
+      
 
-      <div class="top"><img width="100%" src="/img/topSpace.png" /></div>
+      
 
 
       <ul id="life">
@@ -27,13 +28,13 @@
         <li id="l3"><i id="fa3" class="fa-solid fa-heart" style="color: red;"></i></li>
       </ul>
 
-      <h1 class="timer" id="distanceEl">gfgf</h1>
-
+      <h1 class="timer" id="distanceEl"></h1>
+      <div id="explode" class="explode"> <img id="explodeImg" src="/img/explode.png" height="200px" alt=""></div>
       <div id="win" class="win">
         <h1>Gagner !</h1>
         <p>Niveau suivant !</p>
         <ul id="winUl">
-          <li id="next">Niveau 7</li>
+          <li id="next">Niveau 15</li>
           <li id="menu">Menu</li>
         </ul>
       </div>
@@ -48,18 +49,16 @@
 
       </div>
       <div class="plane" id="plane">
-        <img id="plane1" src="/img/spaceShip.png" height="60px" />
+        <img id="plane1" src="/img/astronaute.png" height="80px" />
 
       </div>
-      <div class="bottom"><img width="100%" src="/img/topSpace.png" alt="" /> </div>
 
-
-
+      
 
     </div>
-    <div class="rightPage"></div>
+<div class="rightPage"></div>
   </div>
-  <script src="./lvl6.js"></script>
+  <script src="./lvl14.js"></script>
 
 </body>
 

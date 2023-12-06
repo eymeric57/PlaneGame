@@ -82,6 +82,9 @@ function update() {
 const LaserMaker1 = () => {
     const Laser1 = document.createElement("span");
     Laser1.classList.add("laser1");
+    const size = Math.random() * 50 + 50 + "px";
+    Laser1.style.height = size;
+    Laser1.style.width = size;
    
     const randomX = Math.floor(Math.random() * (game.clientWidth - -500));
     Laser1.style.left = randomX + "px";
@@ -95,7 +98,7 @@ const LaserMaker1 = () => {
     }, 3000);
   };
   
-  setInterval(LaserMaker1, 500);
+  setInterval(LaserMaker1, 100);
   
   update();
 
@@ -114,7 +117,7 @@ function DisTraveled() {
       win.style.zIndex = "50";
       loseDiv.style.display = "none";
       plane.style.display = "none";
-      localStorage.setItem("lvl11", "ok");
+      localStorage.setItem("lvl12", "ok");
     }
   }
 }
@@ -220,7 +223,7 @@ quit.addEventListener("click", () => {
 
 ///////////////////////Win///////////////////////////
 next.addEventListener("click", () => {
-  window.location.href = "../lvl12/lvl12.html";
+  window.location.href = "../lvl14/lvl14.html";
 });
 menu.addEventListener("click", () => {
   window.location.href = "/main/main.html";

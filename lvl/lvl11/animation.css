@@ -9,25 +9,40 @@
   width: 100%;
   background: white;
   display: grid;
-  grid-template-columns: 25% 50% 25%;
+  grid-template-columns: 1fr minmax(900px,900px) 1fr;
+  grid-template-areas: "a b c";
   z-index: 3;
-  height: 100vh;
+
 }
 
 .leftPage {
+  grid-area: "a";
   z-index: 3;
   background: white;
 }
 
 .rightPage {
+  grid-area: "c";
   z-index: 3;
   background: white;
 }
 
+.game {
+  grid-area: "b";
+  min-width: 900px; 
+      overflow: hidden;
+      height: 100vh;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      background: url(/img/space.png);
+      background-size: contain;
+      z-index: 1;
+}
 .astronaute {
     left: 50%;
     top: -250px;
-    height: 200px;
+    height: 100px;
     width: 200px;
     z-index: 20;
     position: absolute;
@@ -113,17 +128,6 @@
   }
 }
 
-.game {
-  width: 100vh;
-  overflow: hidden;
-  height: 100vh;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  background: url(/img/SpaceMov.mp4);
-  
-  
-}
 .Bgame {
     background: black;
 }

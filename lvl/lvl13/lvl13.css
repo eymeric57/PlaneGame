@@ -9,23 +9,47 @@
     width: 100%;
     background: white;
     display: grid;
-    grid-template-columns: 1fr minmax(900px,900px ) 1fr;
+    grid-template-columns: 1fr minmax(900px,900px) 1fr;
     grid-template-areas: "a b c";
     z-index: 3;
-
-}
-
-.leftPage {
+  
+  }
+  
+  .leftPage {
     grid-area: "a";
     z-index: 3;
     background: white;
-}
-
-.rightPage {
+  }
+  
+  .rightPage {
     grid-area: "c";
     z-index: 3;
     background: white;
+  }
+
+  .bubble {
+    position: absolute;
+    border-radius: 300px;
+    background: rgba(255, 166, 0, 0.6);
+    opacity: 1;
+    animation: anim 6s forwards;
+    filter: hue-rotate(0deg);
+    z-index: 12;
+
 }
+  .game {
+    grid-area: "b";
+    max-width: 900px;
+    min-width: 900px; 
+        overflow: hidden;
+        height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        background: url(/img/space.png);
+        background-size: contain;
+        z-index: 1;
+  }
 .explode {
     left: 50%;
     opacity: 0;
@@ -91,19 +115,6 @@
     }
 }
 
-.game {
-grid-area: "b";
-max-width: 900px;
-min-width: 900px; 
-    overflow: hidden;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    background: url(/img/space.png);
-    background-size: contain;
-    z-index: 1;
-}
 
 .gameEnd {
 
@@ -120,129 +131,14 @@ min-width: 900px;
 
 }
 
-@keyframes end10 {
-    0% {
-        transform: translate(0);
-        opacity: 0;
-    }
-
-    5% {
-        opacity: 1;
-    }
-
-    10% {
-        transform: translate(-2px, 2px);
-        opacity: 0;
-    }
-
-    15% {
-        opacity: 1;
-    }
-
-    20% {
-        transform: translate(-2px, -2px);
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    30% {
-        transform: translate(2px, 2px);
-
-        opacity: 0;
-    }
-
-    35% {
-        opacity: 1;
-    }
-
-    40% {
-        transform: translate(2px, -2px);
-        opacity: 0;
-    }
-
-    45% {
-        opacity: 1;
-    }
-
-    50% {
-        transform: translate(0);
-        opacity: 0;
-    }
-
-    45% {
-        opacity: 1;
-    }
-
-    50% {
-        transform: translate(0);
-        opacity: 0;
-    }
 
 
-    55% {
-        opacity: 1;
-    }
-
-    60% {
-        transform: translate(0);
-        opacity: 0;
-    }
-
-    65% {
-        opacity: 1;
-    }
-
-    70% {
-        transform: translate(0);
-        opacity: 0;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    80% {
-        transform: translate(0);
-        opacity: 0;
-    }
-
-    85% {
-        opacity: 1;
-    }
-
-    90% {
-        transform: translate(0);
-        opacity: 0;
-    }
-
-    95% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(0);
-        opacity: 0;
-    }
 
 
-}
 
-.top {
-    margin-top: -100px;
-    width: 1050px;
-
-}
-
-.shieldLoot {
-
-    border: solid white;
-}
 
 .timer {
-    color: black;
+    color: white;
     height: 100px;
 
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -255,7 +151,7 @@ min-width: 900px;
 .win {
     width: 50%;
     background: #89d0f3be;
-    margin: 0 auto;
+    margin: 200px auto;
     height: 300px;
     border-radius: 20px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -283,13 +179,7 @@ min-width: 900px;
     transition: 0.6s;
 }
 
-.bottom {
-    width: 100%;
-    bottom: -80px;
-    transform: rotate(180deg);
-    position: absolute;
 
-}
 
 .plane {
     animation: vibrate-1 4s ease-in-out infinite alternate forwards;
@@ -297,8 +187,9 @@ min-width: 900px;
     transition: 0.1s;
     background-position: center;
     left: 50px;
-    top: 300px;
+    top: 50px;
     z-index: 2;
+   
 }
 
 
@@ -334,49 +225,26 @@ i {
 
 .laser1 {
     background-size: contain;
-    height: 50px;
-    background-image: url(/img/Laser1.png);
+    height: 100px;
+    background-image: url(/img/fireBall.png);
     background-repeat: no-repeat;
     position: absolute;
-    width: 200px;
+    width: 100px;
     z-index: 2;
     animation: cloud1Move 3s linear;
 
 
 }
 
-.laser {
-    background-size: contain;
-    height: 50px;
-    background-image: url(/img/laser.png);
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-    animation: cloud1Move 3s linear;
 
 
-}
 
-.laser3 {
-    background-size: contain;
-    height: 50px;
-    background-image: url(/img/laser3.png);
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-    animation: cloud1Move 3s linear;
-    
-
-
-}
 
 .loser {
     width: 50%;
     background: #89d0f3be;
     height: 300px;
-    margin: -200px auto;
+    margin: -500px auto;
     border-radius: 20px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     z-index: -30;
@@ -544,16 +412,32 @@ li:hover {
 }
 
 @-webkit-keyframes cloud1Move {
-    0% {
+      0% {
+      
+        transform: translateY(800px);
+      }
+      20% {
+        transform: translateX(200px);
+        transform: translateY(400px);
+      }
+      50% {
+        transform: translateY(0px);
+        transform: translateX(100px);
+      }
 
-        transform: translate(800px);
-    }
+      80% {transform: translateY(-650px);
+     
 
-    100% {
-
-        transform: translateX(-1250px);
-    }
+      }
+    
+      100% {
+    
+        transform: translateY(-1250px);
+        
+        
+      }
 }
+
 
 @-webkit-keyframes vibrate-1 {
     0% {
