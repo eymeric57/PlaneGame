@@ -1,6 +1,9 @@
 const cloud = document.getElementsByClassName("span");
 const close = document.getElementById("close");
 
+var audio = document.getElementById("myAudio")
+
+
 ///////////////////////Cloud Maker //////////////////////////
 const cloudMaker1 = () => {
   const cloud = document.createElement("span");
@@ -128,6 +131,22 @@ let lvl11Value = localStorage.getItem("lvl11");
 if (lvl11Value) {
   lvl11.classList.add("lvlFinished");
 }
+let lvl12Value = localStorage.getItem("lvl12");
+if (lvl12Value) {
+  lvl12.classList.add("lvlFinished");
+}
+let lvl13Value = localStorage.getItem("lvl13");
+if (lvl13Value) {
+  lvl13.classList.add("lvlFinished");
+}
+let lvl14Value = localStorage.getItem("lvl14");
+if (lvl14Value) {
+  lvl14.classList.add("lvlFinished");
+}
+let lvl15Value = localStorage.getItem("lvl15");
+if (lvl15Value) {
+  lvl15.classList.add("lvlFinished");
+}
 /////////////////////////LVL Btn ///////////////////////
 
 lvl.addEventListener("click", () => {
@@ -226,5 +245,20 @@ lvl15.addEventListener("click", () => {
     window.location.href = "../lvl/lvl15/lvl15.html";
  
 });
+
+//////Reset//////
+
+
+reset.addEventListener("click", () => {
+  if (
+    confirm("Attention, votre sauvegarde va être supprimé !") ==
+    true
+  ) {
+    localStorage.clear()
+    location.reload()
+  } else {
+  }
+});
+
 
 

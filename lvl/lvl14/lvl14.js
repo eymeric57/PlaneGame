@@ -1,7 +1,7 @@
 const plane1 = document.getElementById("plane1");
 const plane = document.getElementById("plane");
 const distanceElement = document.getElementById("distanceEl");
-const speed = 4;
+const speed = 10;
 const game =  document.getElementById("game")
 let planeTop = 0;
 let planeLeft = 0;
@@ -117,7 +117,7 @@ function DisTraveled() {
       win.style.zIndex = "50";
       loseDiv.style.display = "none";
       plane.style.display = "none";
-      localStorage.setItem("lvl12", "ok");
+      localStorage.setItem("lvl15", "ok");
     }
   }
 }
@@ -223,7 +223,7 @@ quit.addEventListener("click", () => {
 
 ///////////////////////Win///////////////////////////
 next.addEventListener("click", () => {
-  window.location.href = "../lvl14/lvl14.html";
+  window.location.href = "../lvl15/lvl15.html";
 });
 menu.addEventListener("click", () => {
   window.location.href = "/main/main.html";

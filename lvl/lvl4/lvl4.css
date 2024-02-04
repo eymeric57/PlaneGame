@@ -8,6 +8,7 @@
     width: 100%;
     z-index: 5;
     background: white; 
+    text-align: center;
    
   }
   .game {
@@ -39,6 +40,58 @@
     left: 50%;
     padding: 0;
   }
+
+  .pause {
+    top: 15px;
+    right: 15px;
+    position: absolute;
+    background: rgba(128, 128, 128, 0.301);
+    color: rgba(26, 25, 25, 0.719);
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    transition: 0.6s;
+  }
+  .pause:hover {
+    cursor: pointer;
+    scale: 1.2;
+  }
+  
+  #PauseTitle {
+    color: #ffffff;
+    font-size: 3rem;
+  }
+  
+  #pauseMenu {
+    left: -1000px;
+    top: 100px;
+    position: relative;
+    background: #89d0f3be;
+    border-radius: 20px;
+    width: 80%;
+    margin: 00px auto;
+    padding-bottom: 30px;
+  }
+    #PauseBtn {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+  }
+   #PauseBtn li {
+    display: flex;
+    font-size: 1.5rem;
+    background: #cdf5fd9f;
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: #00a9ff;
+    font-weight: 500;
+    z-index: 10;
+    margin-bottom: 10px;
+    transition: 0.6s;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
   
   .win {
     width: 50%;
@@ -133,7 +186,7 @@
     width: 50%;
     background: #89d0f3be;
     height: 300px;
-    margin: -200px auto;
+    margin: -350px auto;
     border-radius: 20px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     z-index: -30;

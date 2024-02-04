@@ -1,7 +1,7 @@
 const plane1 = document.getElementById("plane1");
 const plane = document.getElementById("plane");
 const distanceElement = document.getElementById("distanceEl");
-const speed = 4;
+const speed = 10;
 const game =  document.getElementById("game")
 let planeTop = 0;
 let planeLeft = 0;
@@ -117,7 +117,7 @@ function DisTraveled() {
       win.style.zIndex = "50";
       loseDiv.style.display = "none";
       plane.style.display = "none";
-      localStorage.setItem("lvl12", "ok");
+      localStorage.setItem("lvl13", "ok");
     }
   }
 }

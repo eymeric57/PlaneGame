@@ -144,6 +144,9 @@ function DisTraveled() {
 function stopTraveled() {
   traveled = false;
 }
+function playTraveled() {
+  traveled = true;
+}
 
 setInterval(DisTraveled, 16);
 
@@ -225,7 +228,7 @@ function lose() {
   }
 }
 
-///////// crash2 ///////////////////////////////
+///////// crash3 ///////////////////////////////
 
 function crash3() {
   const planeRect = plane1.getBoundingClientRect();
@@ -266,13 +269,46 @@ function lose() {
     plane1.style.opacity = "0";
     game.classList.add("gameEnd");
     explode.classList.add("explode1");
-    localStorage.setItem("lvl10", "ok");
+    localStorage.setItem("lvl11", "ok");
 
     setTimeout(() => {
       window.location.href = "../lvl11/animation.html";
     }, 3000);
   }
 }
+
+
+///////////////////////////////////Pause //////////////////////////
+
+pause.addEventListener("click", () => { 
+  pauseMenu.style.left="0px"
+  pauseMenu.style.zIndex="20"
+  plane.style.display="none"
+
+  stopTraveled() 
+ 
+})
+
+Play.addEventListener("click", () => {
+  pauseMenu.style.left="-1000px"
+  plane.style.display="block"
+  plane.classList.add("lostLife");
+  
+  setTimeout(() => {
+    playTraveled();
+  }, 3000);
+
+})
+
+Retry.addEventListener("click", () => {
+  location.reload();
+})
+
+Menu.addEventListener("click", () => {
+  window.location.href = "/main/main.html";
+
+})
+
 
 /////////////////////Retry/////////////////////
 

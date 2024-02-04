@@ -74,7 +74,7 @@ const LaserMaker1 = () => {
   
     setTimeout(() => {
       Laser1.remove();
-    }, 3000);
+    }, 1800);
   };
   
   setInterval(LaserMaker1, 1000);
@@ -96,7 +96,7 @@ const LaserMaker1 = () => {
   
     setTimeout(() => {
       Laser.remove();
-    }, 3000);
+    }, 1800);
   };
   
   setInterval(LaserMaker, 500);
@@ -119,13 +119,17 @@ function DisTraveled() {
       win.style.zIndex = "50";
       loseDiv.style.display = "none";
       plane.style.display = "none";
-      localStorage.setItem("lvl9", "ok");
+      localStorage.setItem("lvl10", "ok");
+      pause.style.display="none"
     }
   }
 }
 
 function stopTraveled() {
   traveled = false;
+}
+function playTraveled() {
+  traveled = true;
 }
 
 setInterval(DisTraveled, 16);
@@ -211,6 +215,38 @@ function lose() {
     stopTraveled();
   }
 }
+
+
+///////////////////////////////////Pause //////////////////////////
+
+pause.addEventListener("click", () => { 
+  pauseMenu.style.left="0px"
+  pauseMenu.style.zIndex="20"
+  plane.style.display="none"
+
+  stopTraveled() 
+ 
+})
+
+Play.addEventListener("click", () => {
+  pauseMenu.style.left="-1000px"
+  plane.style.display="block"
+  plane.classList.add("lostLife");
+  
+  setTimeout(() => {
+    playTraveled();
+  }, 3000);
+
+})
+
+Retry.addEventListener("click", () => {
+  location.reload();
+})
+
+Menu.addEventListener("click", () => {
+  window.location.href = "/main/main.html";
+
+})
 
 
 /////////////////////Retry/////////////////////

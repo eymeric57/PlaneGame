@@ -114,7 +114,7 @@ function DisTraveled() {
       win.style.zIndex = "50";
       loseDiv.style.display = "none";
       plane.style.display = "none";
-      localStorage.setItem("lvl11", "ok");
+      localStorage.setItem("lvl12", "ok");
     }
   }
 }

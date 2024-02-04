@@ -1,7 +1,7 @@
 const plane1 = document.getElementById("plane1");
 const plane = document.getElementById("plane");
 const distanceElement = document.getElementById("distanceEl");
-const speed = 2;
+const speed = 5;
 
 let planeTop = 300;
 let isMovingUp = false;
@@ -15,6 +15,8 @@ let element = 0;
 let distance = 1000;
 let traveled = true;
 let counting = true;
+
+
 
 /////////////////////////////Plane Move ////////////////////////
 
@@ -59,7 +61,7 @@ function update() {
 
 ///////////////////////////Cloud Maker ////////////////////////////////
 
-const cloudMaker1 = () => {
+var cloudMaker1 = () => {
   const cloud = document.createElement("span");
   cloud.classList.add("cloud");
 
@@ -75,7 +77,8 @@ const cloudMaker1 = () => {
   }, 5000);
 };
 
-setInterval(cloudMaker1, 1000);
+ setInterval(cloudMaker1, 1000);
+
 
 update();
 
@@ -88,17 +91,22 @@ function DisTraveled() {
     distance = distance <= 0 ? 0 : distance - 0;
 
     if (distance == 0) {
-      win.style.transform = "translateY(00px)";
+      win.style.transform = "translateY(-100px)";
       win.style.zIndex = "50";
       loseDiv.style.display = "none";
       plane.style.display = "none";
       localStorage.setItem("lvl1", "ok");
+      localStorage.setItem("lvl2", "ok");
+      pause.style.display="none"
     }
   }
 }
 
 function stopTraveled() {
   traveled = false;
+}
+function playTraveled() {
+  traveled = true;
 }
 
 setInterval(DisTraveled, 16);
@@ -141,6 +149,37 @@ function lose() {
     stopTraveled();
   }
 }
+
+///////////////////////////////////Pause //////////////////////////
+
+pause.addEventListener("click", () => { 
+  pauseMenu.style.left="0px"
+  pauseMenu.style.zIndex="20"
+  plane.style.display="none"
+
+  stopTraveled() 
+ 
+})
+
+Play.addEventListener("click", () => {
+  pauseMenu.style.left="-1000px"
+  plane.style.display="block"
+  plane.classList.add("lostLife");
+  
+  setTimeout(() => {
+    playTraveled();
+  }, 3000);
+
+})
+
+Retry.addEventListener("click", () => {
+  location.reload();
+})
+
+Menu.addEventListener("click", () => {
+  window.location.href = "/main/main.html";
+
+})
 
 /////////////////////Retry/////////////////////
 
