@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 ////////////////////////////// !Play BTN /////////////////////////////////////
 
 play.addEventListener("click", () => {
-  window.location.href = "../lvl/lvl1/lvl1.html";
+  window.location.href = "./lvl/lvl1/lvl1.html";
 });
 
 close.addEventListener("click", () => {
@@ -159,72 +159,72 @@ lvl.addEventListener("click", () => {
 
 lvl1.addEventListener("click", () => {
   if (lvl1.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl1/lvl1.html";
+    window.location.href = "./lvl/lvl1/lvl1.html";
   
 });
 
 lvl2.addEventListener("click", () => {
   if (lvl1.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl2/lvl2.html";
+    window.location.href = "./lvl/lvl2/lvl2.html";
   
 });
 
 lvl3.addEventListener("click", () => {
   if (lvl3.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl3/lvl3.html";
+    window.location.href = "./lvl/lvl3/lvl3.html";
   
 });
 
 lvl4.addEventListener("click", () => {
   if (lvl4.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl4/lvl4.html";
+    window.location.href = "./lvl/lvl4/lvl4.html";
  
 });
 
 lvl5.addEventListener("click", () => {
   if (lvl5.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl5/lvl5.html";
+    window.location.href = "./lvl/lvl5/lvl5.html";
  
 });
 
 lvl6.addEventListener("click", () => {
   if (lvl6.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl6/lvl6.html";
+    window.location.href = "./lvl/lvl6/lvl6.html";
  
 });
 
 lvl7.addEventListener("click", () => {
   if (lvl7.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl7/lvl7.html";
+    window.location.href = "./lvl/lvl7/lvl7.html";
  
 });
 
 lvl8.addEventListener("click", () => {
   if (lvl8.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl8/lvl8.html";
+    window.location.href = "./lvl/lvl8/lvl8.html";
  
 });
 
 lvl9.addEventListener("click", () => {
   if (lvl9.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl9/lvl9.html";
+    window.location.href = "./lvl/lvl9/lvl9.html";
  
 });
 
 lvl10.addEventListener("click", () => {
   if (lvl10.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl10/lvl10.html";
+    window.location.href = "./lvl/lvl10/lvl10.html";
  
 });
 lvl11.addEventListener("click", () => {
   if (lvl11.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl11/lvl11.html";
+    window.location.href = "./lvl/lvl11/lvl11.html";
  
 });
 
 lvl12.addEventListener("click", () => {
   if (lvl12.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl12/lvl12.html";
+    window.location.href = "./lvl/lvl12/lvl12.html";
  
 });
 
@@ -236,13 +236,13 @@ lvl13.addEventListener("click", () => {
 
 lvl14.addEventListener("click", () => {
   if (lvl14.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl14/lvl14.html";
+    window.location.href = "./lvl/lvl14/lvl14.html";
  
 });
 
 lvl15.addEventListener("click", () => {
   if (lvl15.classList.contains("lvlFinished"))
-    window.location.href = "../lvl/lvl15/lvl15.html";
+    window.location.href = "./lvl/lvl15/lvl15.html";
  
 });
 
