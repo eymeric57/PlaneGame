@@ -4,7 +4,7 @@ const close = document.getElementById("close");
 var audio = document.getElementById("myAudio")
 
 
-///////////////////////Cloud Maker //////////////////////////
+/////////////////////// ! Cloud Maker //////////////////////////
 const cloudMaker1 = () => {
   const cloud = document.createElement("span");
   const size = Math.random() * 100 + 100 + "px";
@@ -21,9 +21,9 @@ const cloudMaker1 = () => {
 };
 setInterval(cloudMaker1, 1000);
 
-///////////////////////////////////////////////////////////
+///////////////////////// //////////////////////////////////
 
-//////////////////////////Cursor/////////////////////////////
+////////////////////////// !Cursor/////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function () {
   const cursor1 = document.querySelector(".custom-cursor");
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//////////////////////////////Play BTN /////////////////////////////////////
+////////////////////////////// !Play BTN /////////////////////////////////////
 
 play.addEventListener("click", () => {
   window.location.href = "../lvl/lvl1/lvl1.html";
@@ -66,7 +66,7 @@ close.addEventListener("click", () => {
   lvlContainer.style.marginTop = "-900px";
 });
 
-//////////////////////////////////////Rules btn //////////////////////////////////////////
+////////////////////////////////////// !Rules btn //////////////////////////////////////////
 
 RulesBtn.addEventListener("click", () => {
   main1.style.display = "none";
