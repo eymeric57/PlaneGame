@@ -175,7 +175,7 @@ Retry.addEventListener("click", () => {
 })
 
 Menu.addEventListener("click", () => {
-  window.location.href = "../../main.html";
+  window.location.href = "../../index.html";
 });
 
 ///////////////////////Win///////////////////////////
@@ -183,7 +183,7 @@ next.addEventListener("click", () => {
     window.location.href = "../lvl4/lvl4.html";
   });
 menu.addEventListener("click", () => {
-  window.location.href = "../../main.html";
+  window.location.href = "../../index.html";
 });
 
 

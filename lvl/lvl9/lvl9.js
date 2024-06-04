@@ -244,7 +244,7 @@ Retry.addEventListener("click", () => {
 })
 
 Menu.addEventListener("click", () => {
-  window.location.href = "../../main.html";
+  window.location.href = "../../index.html";
 
 })
 
@@ -256,7 +256,7 @@ retry.addEventListener("click", () => {
 });
 
 quit.addEventListener("click", () => {
-  window.location.href = "../../main.html";
+  window.location.href = "../../index.html";
 });
 
 ///////////////////////Win///////////////////////////
@@ -264,5 +264,5 @@ next.addEventListener("click", () => {
   window.location.href = "../lvl10/lvl10.html";
 });
 menu.addEventListener("click", () => {
-  window.location.href = "../../main.html";
+  window.location.href = "../../index.html";
 });

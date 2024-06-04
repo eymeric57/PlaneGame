@@ -218,11 +218,11 @@ retry.addEventListener("click", () => {
 });
 
 quit.addEventListener("click", () => {
-  window.location.href = "../../main.html";
+  window.location.href = "../../index.html";
 });
 
 ///////////////////////Win///////////////////////////
 
 menu.addEventListener("click", () => {
-  window.location.href = "../../main.html";
+  window.location.href = "../../index.html";
 });
