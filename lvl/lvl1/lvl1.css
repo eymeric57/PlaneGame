@@ -179,7 +179,7 @@ i {
 .cloud {
   background-size: contain;
   height: 50px;
-  background-image: url(/img/cloud1.png);
+  background-image: url(../img/cloud1.png);
   background-repeat: no-repeat;
   position: absolute;
   width: 100px;
