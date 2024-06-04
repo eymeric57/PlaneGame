@@ -39,7 +39,7 @@
       margin-left: auto;
       margin-right: auto;
       position: relative;
-      background: url(/img/space.png);
+      background: url(../../img/space.png);
       background-size: contain;
       z-index: 1;
 }
@@ -196,7 +196,7 @@ i {
 .laser1 {
   background-size: contain;
   height: 50px;
-  background-image: url(/img/Laser1.png);
+  background-image: url(../../img/Laser1.png);
   background-repeat: no-repeat;
   position: absolute;
   width: 200px;
@@ -209,7 +209,7 @@ i {
 .laser {
   background-size: contain;
   height: 50px;
-  background-image: url(/img/laser.png);
+  background-image: url(../../img/laser.png);
   background-repeat: no-repeat;
   position: absolute;
   width: 200px;
