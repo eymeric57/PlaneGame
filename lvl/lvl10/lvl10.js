@@ -1,7 +1,7 @@
 const plane1 = document.getElementById("plane1");
 const plane = document.getElementById("plane");
 const distanceElement = document.getElementById("distanceEl");
-const speed = 2;
+const speed = 5;
 const game = document.getElementById("game");
 
 let planeTop = 300;
